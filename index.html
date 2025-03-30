@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Chocolatier | Artisan Chocolate Delights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="shipping-info">
+            <span>Free shipping on orders over $100</span>
+        </div>
+        <div class="top-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Store Locator</a>
+            <a href="#">Account</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="main-header">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>Luxury Chocolatier</span>
+            </div>
+            
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Gifts</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Artisan Chocolate Creations</h1>
+        <p>Handcrafted with premium ingredients and passion. Experience the finest luxury chocolates from around the world.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn">Shop Now</a>
+            <a href="#" class="btn btn-outline">Discover More</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2 class="section-title">Our Signature Collection</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; color: var(--text-muted);">
+            Each piece is a masterpiece, crafted with the finest cocoa beans and premium ingredients from sustainable sources.
+        </p>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-badge">Best Seller</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Truffle Collection">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Truffles</div>
+                    <h3 class="product-title">Velvet Truffle Collection</h3>
+                    <p class="product-description">A luxurious assortment of 16 handcrafted truffles with exotic flavors like champagne, sea salt, and passion fruit.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$48.00</span>
+                            <span class="old-price">$75.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="1" data-name="Velvet Truffle Collection" data-price="48.00" data-image="https://images.unsplash.com/photo-1575377427642-087cf684f29d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-badge">Popular</div>
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71vUvG9R5XL._AC_UF1000,1000_QL80_.jpg" alt="Ferrero Rocher">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Pralines</div>
+                    <h3 class="product-title">Ferrero Rocher Gold Collection</h3>
+                    <p class="product-description">Iconic golden-wrapped hazelnut chocolates with crispy wafer, creamy filling, and whole hazelnut.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$32.00</span>
+                            <span class="old-price">$40.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="2" data-name="Ferrero Rocher Gold Collection" data-price="32.00" data-image="https://m.media-amazon.com/images/I/71vUvG9R5XL._AC_UF1000,1000_QL80_.jpg">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1606313564200-75a9bb2d1b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Chocolate Gift Box">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Gift Boxes</div>
+                    <h3 class="product-title">Grand Chocolate Gift Box</h3>
+                    <p class="product-description">An exquisite selection of 32 pieces including truffles, pralines, and chocolate-covered fruits.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$95.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="3" data-name="Grand Chocolate Gift Box" data-price="95.00" data-image="https://images.unsplash.com/photo-1606313564200-75a9bb2d1b0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Chocolate Dipped Strawberries">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Seasonal</div>
+                    <h3 class="product-title">Chocolate Dipped Strawberries</h3>
+                    <p class="product-description">Fresh strawberries hand-dipped in our signature dark, milk, and white chocolate blends.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$36.00</span>
+                            <span class="old-price">$42.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="4" data-name="Chocolate Dipped Strawberries" data-price="36.00" data-image="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-badge">Limited</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Belgian Chocolate Assortment">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Assortment</div>
+                    <h3 class="product-title">Belgian Chocolate Selection</h3>
+                    <p class="product-description">24-piece assortment of the finest Belgian chocolates with creamy ganaches and delicate pralines.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$65.00</span>
+                            <span class="old-price">$78.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="5" data-name="Belgian Chocolate Selection" data-price="65.00" data-image="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Hazelnut Pralines">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Pralines</div>
+                    <h3 class="product-title">Hazelnut Praline Box</h3>
+                    <p class="product-description">12 handcrafted hazelnut pralines with a crispy core enveloped in smooth milk chocolate.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$38.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="6" data-name="Hazelnut Praline Box" data-price="38.00" data-image="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Caramel Sea Salt Chocolate">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Chocolate Bars</div>
+                    <h3 class="product-title">Caramel Sea Salt Chocolate</h3>
+                    <p class="product-description">Silky 70% dark chocolate with rivers of caramel and flakes of French sea salt.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$28.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="7" data-name="Caramel Sea Salt Chocolate" data-price="28.00" data-image="https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1606312619470-4a3f2c5e0b71?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="White Chocolate Raspberry">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Truffles</div>
+                    <h3 class="product-title">White Chocolate Raspberry</h3>
+                    <p class="product-description">Creamy white chocolate truffles with a tangy raspberry center, dusted with freeze-dried raspberry powder.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$42.00</span>
+                            <span class="old-price">$50.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="8" data-name="White Chocolate Raspberry" data-price="42.00" data-image="https://images.unsplash.com/photo-1606312619470-4a3f2c5e0b71?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-badge">Gift</div>
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Chocolate Lover's Hamper">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Gift Hampers</div>
+                    <h3 class="product-title">Chocolate Lover's Hamper</h3>
+                    <p class="product-description">Curated selection of our finest chocolates, cocoa powder, and artisanal hot chocolate mix in a premium gift box.</p>
+                    <div class="product-price">
+                        <div>
+                            <span class="price">$120.00</span>
+                        </div>
+                        <button class="add-to-cart" data-id="9" data-name="Chocolate Lover's Hamper" data-price="120.00" data-image="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#" class="btn">View All Collections</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Chocolate Master">
+        </div>
+        <div class="about-content">
+            <h2>Our Chocolate Story</h2>
+            <p>Founded in 1985, Luxury Chocolatier began as a small family-owned patisserie in Brussels, Belgium. Our founder, Jean-Luc Moreau, was passionate about creating the finest chocolate experiences using traditional techniques passed down through generations.</p>
+            <p>Today, we continue this legacy by sourcing the highest quality cocoa beans from sustainable farms around the world. Each chocolate piece is still handcrafted by our master chocolatiers with the same attention to detail and love.</p>
+            <p>We believe luxury chocolate should be an experience for all senses - from the exquisite packaging to the first melt on your tongue.</p>
+            <div class="signature">Jean-Luc Moreau</div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        
+        <div class="testimonial-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The Velvet Truffle Collection is absolutely divine! Each piece is like a little work of art that melts in your mouth. Worth every penny for special occasions."</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah J.</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The Ferrero Rocher Gold Collection brings back childhood memories but with a luxurious twist. The perfect balance of crunch and creaminess!"</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Michael T.</h4>
+                        <p>Chocolate Connoisseur</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The Grand Gift Box was perfect for my anniversary. Beautiful presentation and the chocolates were exquisite. My wife said it was the most thoughtful gift!"</p>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="David L.">
+                    </div>
+                    <div class="author-info">
+                        <h4>David L.</h4>
+                        <p>Happy Customer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Join Our Chocolate Club</h2>
+        <p>Subscribe to receive exclusive offers, new product announcements, and 15% off your first order.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">All Chocolates</a></li>
+                    <li><a href="#">Truffles</a></li>
+                    <li><a href="#">Chocolate Bars</a></li>
+                    <li><a href="#">Gift Boxes</a></li>
+                    <li><a href="#">Seasonal Specials</a></li>
+                    <li><a href="#">Corporate Gifts</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Cocoa Sourcing</a></li>
+                    <li><a href="#">Master Chocolatiers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <p style="margin-top: 2rem; color: var(--text-muted);">
+                    <i class="fas fa-phone" style="margin-right: 0.5rem;"></i> +1 (800) 555-1234
+                </p>
+                <p style="color: var(--text-muted);">
+                    <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> hello@luxurychocolatier.com
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Luxury Chocolatier. All rights reserved. | <a href="#" style="color: var(--text-muted);">Privacy Policy</a> | <a href="#" style="color: var(--text-muted);">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Your Shopping Cart</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="cart-items" id="cart-items">
+                    <!-- Cart items will be added here dynamically -->
+                </table>
+                <div class="empty-cart" id="empty-cart">
+                    <i class="fas fa-shopping-bag" style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent);"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Start adding some delicious chocolates!</p>
+                </div>
+            </div>
+            <div class="modal-footer" id="cart-footer" style="display: none;">
+                <div class="cart-total">
+                    Total: <span id="cart-total">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Item added to cart!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
